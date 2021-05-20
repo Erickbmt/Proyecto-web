@@ -1,6 +1,10 @@
 
 /* Hay algunas cosas que no pude borrar kjsajkldfdl perdone profe */
 
+*{
+    padding: 0;
+}
+
 /* Body */
 body{
     margin: 0;
@@ -37,7 +41,7 @@ body{
 .navegacion{
 
     list-style: none;
-    width: 100%;
+    width: auto;
     max-width: 1000px;
     margin: auto;
     color: white;
@@ -122,14 +126,78 @@ footer{
 
 .menu_comida img{
 
-    height: 900px;
+    height: 1000px;
     padding-top: 50px;
-    padding-left: 60px;
+    padding-left: 300px;
+    margin: auto;
     
     
 }
 
+.lateral_menu2 {
 
+    height: 100px;
+    padding-bottom: 50px;
+    padding-right: 5px;
+    
+}
+
+/* formulario de reseña */
+
+.resena_titulo{
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    height: auto;
+    width: auto;
+    padding: 160px;
+}
+
+.resena_form{
+    color: white;
+    text-shadow: 3px 2px 3px black;
+
+}
+
+/* Formulario pedido */
+
+.mensaje_pedido{
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+.formulario_datos_usuario {
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    width: 40%;
+    margin: auto;
+
+}
+
+
+
+/* Pagina confirmacion */
+
+.img_confirmacion {
+
+    height: 600px;
+    padding-top: 80px;
+    padding-left: 350px;
+
+}
+
+.mensaje_confirmacion{
+
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    text-shadow: 3px 2px 3px black;
+}
 
 /* Responsivo */
 
@@ -138,6 +206,13 @@ footer{
         flex-direction: column;
     }
 
+    .menu_comida {
+
+        flex-direction: column;
+        margin: auto;
+        
+    }
+    
     .carrusel{
         flex-direction: column;
     }
@@ -145,5 +220,5 @@ footer{
         
         flex-direction: row;
         
-    }
+    }    
 }
