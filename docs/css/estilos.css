@@ -179,6 +179,13 @@ footer{
 
 }
 
+#contenedor_pedido tr {
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+
+}
+
 
 
 /* Pagina confirmacion */
