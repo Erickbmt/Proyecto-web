@@ -11,6 +11,11 @@ $("#formulario1").validate({
         "txtNombre": {
             required: true
             
+        },
+        "pedido":{
+
+            required: true
+
         }
     }, // --> Fin de reglas
     messages: {
@@ -24,6 +29,11 @@ $("#formulario1").validate({
         },
         "txtNombre": {
             required: 'Ingrese su nombre para identificarlo'
+        },
+        "pedido":{
+            if(pedido = pedidoSelelccionado){
+                required: 'Por favor seleccione una de las opciones'
+            }
         }
     } //-->Fin de mensajes
  
