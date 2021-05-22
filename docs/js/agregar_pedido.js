@@ -5,7 +5,9 @@ $(document).ready(function () {
 
             var nombre = $("#id_txtNombre").val();
             var correo = $("#id_txtEmail").val();
-            var pedido = $("#pedidoSeleccionado").val();
+            var pedido = $("#pedido :selected").text();
+            
+            
             var fila = '<tr><th>' + nombre + '</th><th>' + correo + '</th><th>' + pedido + '</th></tr>';
 
             $('#tabla_pedidos>tbody').append(fila);
