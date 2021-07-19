@@ -1,0 +1,243 @@
+
+/* Hay algunas cosas que no pude borrar kjsajkldfdl perdone profe */
+
+*{
+    padding: 0;
+}
+
+/* Body */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/fondo_img/fondo_1.jpg); 
+    background-color: black;  
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    color: white;
+    
+}
+
+/* Texto de bienvenida la restaurante */
+
+.lateral_1{
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    
+}
+
+/* _________________________________ */
+
+
+/* Para el menu de navegacion */
+.header{
+
+    width: 100%;
+    height: 70px;
+    float: left;
+}
+
+.navegacion{
+
+    list-style: none;
+    width: auto;
+    max-width: 1000px;
+    margin: auto;
+    color: white;
+}
+
+.navegacion button{
+    display:inline;
+    text-align:left;
+}
+
+.navegacion text{
+    
+    color: white;
+    font-size: 20px;
+    width: auto;
+    height: 20px;
+    float: left;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+
+
+
+/* Carrusel */
+
+.lateral_2{
+
+    width: auto;
+    height: auto;
+}
+
+/* El mensaje para conocernos mejor */
+
+#conocenos1{
+
+    color: white;
+    width: auto;
+    height: auto;
+}
+
+/* ________________________________ */
+
+/* Cosas para el footer */
+
+footer{
+    background-color: rgb(156, 105, 9);
+    width: auto;
+    height: 80px;
+    
+}
+
+.redes {
+    width: auto;
+    display: flexbox;
+
+}
+
+/* Aqui intentaremos arreglar la posicion de las listas (como las imagenes de las redes) */
+.redes ul li {
+    color: white;
+    border-radius: 50%;
+    width: auto;
+    height: 25px;
+    list-style: none;
+    display: inline-block;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    
+}
+
+.redes img {
+    height: 50px;
+    width: auto;
+    
+    
+}
+
+
+/* Menu del restaurante */
+
+.menu_comida img{
+
+    height: 1000px;
+    padding-top: 50px;
+    padding-left: 300px;
+    margin: auto;
+    
+    
+}
+
+.lateral_menu2 {
+
+    height: 100px;
+    padding-bottom: 50px;
+    padding-right: 5px;
+    
+}
+
+/* formulario de reseña */
+
+.resena_titulo{
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    height: auto;
+    width: auto;
+    padding: 160px;
+}
+
+.resena_form{
+    color: white;
+    text-shadow: 3px 2px 3px black;
+
+}
+
+/* Formulario pedido */
+
+.mensaje_pedido{
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+.formulario_datos_usuario {
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+    width: 40%;
+    margin: auto;
+
+}
+
+/* Para la lista */
+
+
+#contenedor_pedido tr {
+
+    color: white;
+    text-shadow: 3px 2px 3px black;
+
+}
+
+/* Tabla pedidos */
+
+#tabla_pedidos {
+
+    margin: auto;
+    
+}
+
+
+/* Pagina confirmacion */
+
+.img_confirmacion {
+
+    height: 600px;
+    padding-top: 80px;
+    padding-left: 350px;
+
+}
+
+.mensaje_confirmacion{
+
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    text-shadow: 3px 2px 3px black;
+}
+
+/* Responsivo */
+
+@media screen and (max-width:720px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .menu_comida {
+
+        flex-direction: column;
+        margin: auto;
+        
+    }
+    
+    .carrusel{
+        flex-direction: column;
+    }
+    .footer {
+        
+        flex-direction: row;
+        
+    }    
+}

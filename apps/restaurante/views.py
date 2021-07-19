@@ -1,0 +1,16 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+
+def home(request):
+    
+    return render(request, 'restaurante/home.html')
+
+def menu(request):
+    
+    return render(request, 'restaurante/menu.html')
+
+def confirmacion(request):
+    
+    return render(request, 'restaurante/confirmacion.html')

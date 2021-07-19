@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<div class= formulario_datos_usuario>
+
+    <h1>Editar plato</h1>
+
+    <form method="POST">
+
+        {{ form }}
+        {% csrf_token %}
+
+        <button class="btn btn-warning" type="submit">Editar</button>
+
+    </form>
+
+</div>
+
+
+
+{% endblock %}

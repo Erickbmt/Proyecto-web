@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+<h2>Lista de Pedidos</h2>
+{% for c in cliente %}
+
+<div class="lista_pedidos">
+    <table class="table table-dark table-responsive-sm">
+        <thead>
+            <tr>
+                <th>Nombre cliente </th>
+                <th>Direccion </th>
+                <th>Correo electronico</th>
+                <th>Telefono</th>
+                <th>Nombre del Plato </th>
+
+            </tr>
+
+            <tr>
+                <td>{{ c.nombre }}</td>
+                <td>{{ c.direccion }}</td>
+                <td>{{ c.email }}</td>
+                <td>{{c.telefono}}</td>
+                <td>{{ c.pedido }}</td>
+
+                <td>
+                    <a class="btn btn-info" href="{% url 'editar_pedido' c.id %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'delete_pedido' c.id %}">Eliminar</a>
+                </td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;  
+    background-position: center;
+    font-family: sans-serif;
+}
+
+
+.contenedor {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav-link {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+}
+
+#login {
+    color: #358007;
+}
+
+.login-form {
+    width: 500px;
+    background: #000;
+    color: #fff;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+    margin-top: 100px;
+}
+
+.login-form h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Cinzel', serif;
+}
+
+.login-form label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-family: 'Cinzel', serif;
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+}
+
+.login-form input[type="text"], .login-form input[type="password"], .login-form input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login-form input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.login-form a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.login-form a:hover {
+    color: #fff;
+}
+
+div.error {
+    color: #b80f22;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:280px) {
+    .navbar-brand {
+        font-size: 19px;
+    }
+    .nav-link {
+        font-size: 15px;
+    }
+    .login-form {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .navbar-brand {
+        font-size: 26px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .login-form {
+        width: 280px;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1086px) {
+    .navbar-brand {
+        font-size: 45px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .login-form {
+        width: 350px;
+    }
+}
