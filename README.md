@@ -1,5 +1,2 @@
-# Proyecto-web
-Web de un Restaurante el cual es especializado en servir comidas de varias partes del mundo
-
-
-Arturo, intente todo pero siempre me mandaba a la rama master y no a la main. Lo hice como 2 veces y no me funciono. Asi que lo tuve que dejar en la rama master, perdón.
+# Proyecto-web (INFORMACION ABAJO)
+Arturo los archivos de la pagina se encuentran en la rama master, debido a que no he podido moverlos hacia las rama main
