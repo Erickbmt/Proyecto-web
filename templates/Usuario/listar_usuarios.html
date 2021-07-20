@@ -1,0 +1,68 @@
+{% extends 'Usuario/base/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/usuario/listar.css' %}">
+{% endblock %}
+
+{% block navbar %}
+<div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'img/icons/Logo.png' %}" alt="" width="40" height="40"
+            class="d-inline-block align-text-center">
+        RESTAURANTE WANMIN
+    </a>
+
+    <a href="{% url 'home' %}" class="btn btn-outline-light" role="button">Inicio</a>
+
+    {% if user.is_authenticated %}
+    {% if user.is_superuser %}
+    <a  class="btn btn-outline-warning" role="button" style="color: white;" href="{% url 'listar_usuarios' %}">Listar usuarios</a>
+    <a  class="btn btn-outline-success" role="button" style="color: white;" href="{% url 'pedidoCreate' %}">CRUD</a>
+    {% endif %}
+   
+    <a class="btn btn-outline-danger" role="button" href="{% url 'logout'%}">Cerrar sesión</a>
+    <span class="ml-md-5" style="color: red;"><strong>Usuario: {{ user.get_username }}</strong></span>
+    {% endif %}   
+
+</div>
+
+{% endblock %}
+
+{% block titulo %} <h1>Listar usuarios</h1>{% endblock %}
+{% block content %}
+<div class="contenido">
+    {% if object_list %}
+
+    <table class="table table-dark table-responsive-sm">
+
+        {% for user in object_list %}
+        <thead>
+            <tr>
+                <th>Nombre Usuario </th>
+                <th>Correo electronico</th>
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+
+        {% endfor %}
+
+        {% else %}
+        <h1>No hay registros de user</h1>
+        {% endif %}
+    </table>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

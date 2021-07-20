@@ -39,25 +39,44 @@
 
         <!-- HEADER -->
 
+
         <div class="container-fluid">
             <div class="header">
 
-
+                {% block navbar %}
                 <div class="navegacion">
                     <nav class="navbar">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="{% url 'home' %}">
-                                <img src="{% static 'img/icons/Logo.png' %}" alt="" width="50" height="50"
+                                <img src="{% static 'img/icons/Logo.png' %}" alt="" width="40" height="40"
                                     class="d-inline-block align-text-center">
                                 RESTAURANTE WANMIN
                             </a>
+
                             <a href="{% url 'home' %}" class="btn btn-outline-light" role="button">Inicio</a>
                             <a href="#conocenos1" class="btn btn-outline-light">¿Que ofrecemos?</button>
-                                <a href="{% url 'menu' %}" class="btn btn-outline-light" role="button">Menu</a>
+                                <a href="{% url 'menu' %}" class="btn btn-outline-light" role="button">Delivery</a>
                                 <a href="#redes1" class="btn btn-outline-light" role="button">Contactos</a>
+                                
+                            {% if not user.is_authenticated %}
+                            <a class="btn btn-outline-warning" role="button" href="{% url 'usuario_form' %}">Registrarse</a>
+                            <a href="{% url 'login' %}" class="btn btn-outline-success" role="button">Iniciar sesión</a></li>
+                            {% endif %}
+
+                            {% if user.is_authenticated %}
+                            {% if user.is_superuser %}
+                            <a  class="btn btn-outline-warning" role="button" style="color: white;" href="{% url 'listar_usuarios' %}">Listar usuarios</a>
+                            <a  class="btn btn-outline-success" role="button" style="color: white;" href="{% url 'pedidoCreate' %}">CRUD</a>
+                            {% endif %}
+                           
+                            <a class="btn btn-outline-danger" role="button" href="{% url 'logout' %}">Cerrar sesión</a>
+                            <span class="ml-md-5" style="color: red;"><strong>Usuario: {{ user.get_username }}</strong></span>
+                            {% endif %}   
+
                         </div>
                     </nav>
                 </div>
+                {% endblock %}
 
                 {% block content%}
 
@@ -65,6 +84,7 @@
 
 
                 <!-- FOOTER -->
+                {% block footer %}
                 <div class="container">
                     <footer class="footer">
                         <!--Contactos del restaurante -->
@@ -87,6 +107,7 @@
                         </div>
                     </footer>
                 </div>
+                {% endblock %}
 
             </div>
 

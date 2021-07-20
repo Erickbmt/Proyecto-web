@@ -3,20 +3,23 @@ from django.urls.resolvers import URLPattern
 
 from . import views
 
+# Decorators
+from django.contrib.auth.views import login_required
+
 urlpatterns = [
     
     # Dejaremos inutilizable por ahora estas url
     
     path('cliente_form', views.cliente_form, name='pedido_form'),
     
-    path('listar_pedido/', views.listar_pedido, name="listar_pedido"),
+    path('listar_pedido/', login_required(views.listar_pedido), name="listar_pedido"),
 
-    path('editar_pedido/<int:id>', views.editar_pedido, name="editar_pedido"),
+    path('editar_pedido/<int:id>', login_required(views.editar_pedido), name="editar_pedido"),
     
-    path('delete_pedido/<int:id>/', views.delete_pedido, name="delete_pedido"),
+    path('delete_pedido/<int:id>/', login_required(views.delete_pedido), name="delete_pedido"),
     # URL CLIENTE
     
-    path('pedidoCreate', views.pedidoCreate.as_view(), name="pedidoCreate"),
+    path('pedidoCreate', login_required(views.pedidoCreate.as_view()), name="pedidoCreate"),
     
     # Llamando a las clases genericas, que quedaran sin uso por ahora
     

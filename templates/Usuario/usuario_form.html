@@ -1,0 +1,53 @@
+{% extends 'Usuario/base/base.html'%}
+
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/usuario/login.css' %}">
+
+{% endblock %}
+
+
+<!--  NAVBAR  -->
+{% block navbar %}
+
+<a class="navbar-brand" href="{% url 'home' %}">
+    <img src="{% static 'img/icons/Logo.png' %}" alt="" width="50" height="50"
+        class="d-inline-block align-text-center">
+    RESTAURANTE WANMIN
+</a>
+
+<a href="{% url 'home' %}" class="btn btn-outline-light" role="button">Volver al inicio</a>
+
+{% endblock %}
+
+
+<!-- FORMULARIO  -->
+{% block content %}
+
+<div class="contenido">
+    <div class="login-form">
+        <h1>Registro Usuario</h1>
+        <form id="contact-form" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Registrarse">
+            <a href="#">¿Problemas para crear una cuenta?</a><br>
+            <a href="{% url 'login' %}">¿Ya tiene una cuenta? Ingrese!</a>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+<!-- FOOTER -->
+{% block footer %}
+
+{% endblock %}
+
+
+
+

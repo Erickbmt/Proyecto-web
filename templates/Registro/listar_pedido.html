@@ -2,6 +2,29 @@
 
 {% load static %}
 
+{% block navbar %}
+<div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'img/icons/Logo.png' %}" alt="" width="40" height="40"
+            class="d-inline-block align-text-center">
+        RESTAURANTE WANMIN
+    </a>
+
+    <a href="{% url 'home' %}" class="btn btn-outline-light" role="button">Inicio</a>
+
+    {% if user.is_authenticated %}
+    {% if user.is_superuser %}
+    <a  class="btn btn-outline-warning" role="button" style="color: white;" href="{% url 'listar_usuarios' %}">Listar usuarios</a>
+    <a  class="btn btn-outline-success" role="button" style="color: white;" href="{% url 'pedidoCreate' %}">CRUD</a>
+    {% endif %}
+   
+    <a class="btn btn-outline-danger" role="button" href="#">Cerrar sesión</a>
+    <span class="ml-md-5" style="color: red;"><strong>Usuario: {{ user.get_username }}</strong></span>
+    {% endif %}   
+
+</div>
+
+{% endblock %}
 
 {% block content %}
 
@@ -9,6 +32,7 @@
 
 
 <h2>Lista de Pedidos</h2>
+<!-- Recordatorio: Tambien se puede usar {% for cliente in object_list %} {% endfor %} -->
 {% for c in cliente %}
 
 <div class="lista_pedidos">

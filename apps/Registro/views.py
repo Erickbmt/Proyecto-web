@@ -77,11 +77,10 @@ class pedidoCreate(CreateView):
     template_name = 'Registro/pedido_form.html'
     success_url = reverse_lazy("confirmacion")
 
-
+# Clases genericas si necesitamos a futuro
 # class pedidoList(ListView):
 #     model = Pedido
 #     template_name = 'Registro/listar_pedidos.html'
-#     # paginate_by = 4
 
 
 # class pedidoUpdate(UpdateView):

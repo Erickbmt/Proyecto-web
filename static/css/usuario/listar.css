@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;  
+    background-position: center;
+    font-family: sans-serif;
+    background: url(/static/img/fondo_img/fondo_1.jpg); 
+}
+
+body h1 {
+    
+    color: white;
+}
+
+
+
+.contenido th{
+    
+    font-weight: bold;
+}
