@@ -5,7 +5,7 @@
 {% block content %}
 <div class= formulario_datos_vendedor>
     <h1>Editar Vendedor</h1>
-    <form method="POST">
+    <form method="POST" class="formulario-edit">
         {{ form}}
         {% csrf_token %}
         <button class="btn btn-warning" type="submit">Editar</button>

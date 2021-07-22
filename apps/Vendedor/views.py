@@ -44,8 +44,7 @@ class VendedorDelete(DeleteView):
     success_url = reverse_lazy('listar_vendedor')
 
 
-# ---------------- API ---------------------------
-
+# ---------------- API CON GENERICS ---------------------------
 class API_objects(generics.ListCreateAPIView):
     queryset = Vendedor.objects.all()
     serializer_class = VendedorSerializer
@@ -53,3 +52,5 @@ class API_objects(generics.ListCreateAPIView):
 class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
     queryset = Vendedor.objects.all()
     serializer_class = VendedorSerializer
+    
+# La funcion de crear un token por cada usuario registrado en la BD esta en Registro/views.py

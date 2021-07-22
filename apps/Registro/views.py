@@ -160,3 +160,6 @@ def cliente_element(request, pk):
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
+        
+# A futuro: intentar obtener por medio de un modelo y una funcion con views.py
+# Intentar obtener el token y enviarlo como string el token a la url (<string:token> , Funciona?)

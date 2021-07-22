@@ -1,20 +1,27 @@
 {% extends 'Vendedor/base/base.html' %}
 
+{% load static %}
+
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/vendedor/estilos.css' %}">
 {% endblock %}
 
+
+{% block titulo %}  <h1>Agregar vendedor</h1> {% endblock %}
+
 {% block content %}
 
 <div class="datos_vendedor">
+    <br>
     <form method="POST" class="vendedor-form">
 
         {% csrf_token %}
         {{form}}
 
         <button type="submit" class="btn btn-primary" id="id_botonEnviar">Enviar</button>
-
+        <br>
+        <a class="btn btn-danger" href="{% url 'listar_vendedor' %}">Ir a listar vendedores</a>
     </form>
 </div>
 

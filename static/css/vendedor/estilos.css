@@ -1,9 +1,83 @@
 *{
     padding: 0;
+    
 }
 
 
-.lista_vendedor{
+body {
 
     background-color: black;
+}
+
+.datos_vendedor{
+
+    background-color: #b80f22;
+    border-radius: 10;
+    width: 600px;
+    border-radius: 20px;
+    margin-left: 200px;
+}
+
+.vendedor-form input[type="text"],.vendedor-form input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.vendedor-form{
+    align-items: center;
+    width: 500px;
+    margin-left: 50px;
+}
+
+.vendedor-form label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    color: white;
+}
+
+.header h1{
+
+    color: white;
+}
+
+/* EDITAR */
+
+.formulario_datos_vendedor{
+
+    background-color: #b80f22;
+    border-radius: 10;
+    width: 600px;
+    border-radius: 20px;
+    margin-left: 200px;
+}
+
+.formulario-edit input[type="text"], .formulario_datos_vendedor input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.formulario-edit label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    color: white;
+}
+
+.formulario-edit {
+    align-items: center;
+    width: 500px;
+    margin-left: 50px;
 }
