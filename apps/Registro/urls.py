@@ -6,6 +6,8 @@ from . import views
 
 # Decorators
 from django.contrib.auth.views import login_required
+# api
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     
@@ -29,3 +31,5 @@ urlpatterns += [
     path('api/', views.cliente_collection, name="cliente_collection"),
     path('api/<int:pk>/', views.cliente_element, name="cliente_element"),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
