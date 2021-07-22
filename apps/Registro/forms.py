@@ -19,7 +19,7 @@ class PedidoForm(forms.ModelForm):
 
         widgets = {
 
-            'nombre_plato': forms.Select(choices="nombre_pedido", attrs={'class': 'form-control'}),
+            'nombre_plato': forms.TextInput(attrs={'class': 'form-control'}),
             # Readonly para que solo muestre el precio
             'precio': forms.TextInput(attrs={'class': 'form-control'}),
 

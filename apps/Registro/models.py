@@ -3,19 +3,21 @@ from django import forms
 from django.db.models.fields import IntegerField
 # Create your models here.
 
-nombre_pedido = (
-    ('Chop suey', 'Chop suey'),
-    ('Pollo frito y papas fritas', 'Pollo frito y papas fritas'),
-    ('Ensalada BBQ con Pork belly', 'Ensalada BBQ con Pork belly'),
-    ('Torta de piña', 'Torta de piña'),
-    ('Torta de merengue de mango', 'Torta de merengue de mango'),
-    ('Jugo de mango', 'Jugo de mango'),
-)
+
+# _____________________ ANTIGUA FORMA DE ELEGIR PEDIDOS POR DEFECTO _______________________
+# nombre_pedido = (
+#     ('Chop suey', 'Chop suey'),
+#     ('Pollo frito y papas fritas', 'Pollo frito y papas fritas'),
+#     ('Ensalada BBQ con Pork belly', 'Ensalada BBQ con Pork belly'),
+#     ('Torta de piña', 'Torta de piña'),
+#     ('Torta de merengue de mango', 'Torta de merengue de mango'),
+#     ('Jugo de mango', 'Jugo de mango'),
+# )
 
 
 class Pedido(models.Model):
 
-    nombre_plato = models.CharField(choices=nombre_pedido, max_length=100)
+    nombre_plato = models.CharField(max_length=100)
 
     precio = models.IntegerField()
 
