@@ -1,0 +1,52 @@
+{% extends 'Vendedor/base/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/vendedor/estilos.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+<h2>Lista de Vendedores</h2>
+
+{% for vendedor in object_list %}
+
+<div class="lista_vendedor">
+    <table class="table table-dark table-responsive-sm">
+        <thead>
+            <tr>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Correo electronico</th>
+                <th>Salario</th>
+                <th>Nivel de Estudio</th>
+
+            </tr>
+
+            <tr>
+                <td>{{ vendedor.rut }}</td>
+                <td>{{ vendedor.nombre }}</td>
+                <td>{{ vendedor.telefono }}</td>
+                <td>{{ vendedor.email }}</td>
+                <td>{{vendedor.sueldo}}</td>
+                <td>{{ vendedor.nivel_estudio }}</td>
+
+                <td>
+                    <a class="btn btn-info" href="{% url 'editar_vendedor' vendedor.id %}">Editar</a>
+                    <a class="btn btn-danger" href="{% url 'delete_vendedor' vendedor.id %}">Eliminar</a>
+                </td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

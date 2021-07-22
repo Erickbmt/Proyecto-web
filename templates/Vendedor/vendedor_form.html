@@ -1,0 +1,22 @@
+{% extends 'Vendedor/base/base.html' %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/vendedor/estilos.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="datos_vendedor">
+    <form method="POST" class="vendedor-form">
+
+        {% csrf_token %}
+        {{form}}
+
+        <button type="submit" class="btn btn-primary" id="id_botonEnviar">Enviar</button>
+
+    </form>
+</div>
+
+
+{% endblock %}

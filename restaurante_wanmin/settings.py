@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'apps.Registro',
     'apps.Usuario',
     'apps.restaurante',
+    'apps.Vendedor',
     'rest_framework',
     'rest_framework.authtoken',
+    
 ]
 
 REST_FRAMEWORK = {
