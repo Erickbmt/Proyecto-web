@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def home(request):
     
-    return render(request, 'restaurante/home.html')
+    return render(request, 'home.html')
 
 def menu(request):
     

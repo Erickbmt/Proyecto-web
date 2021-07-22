@@ -93,10 +93,17 @@ WSGI_APPLICATION = 'restaurante_wanmin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+# Recordatorio: Al parecer solo se puede trabajar con las versiones de Oracle superiores o iguales
+# a Oracle 12, Oracle 11g no funcionara como motor
+# Version usada de oracle correctamente: 18c
+# Version con error: 11g
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xe',
+        # Los valores ascii (c##) Se deben incluir en los nombres de Usuario en versiones
+        # Superiores de oracle 11g
         'USER': 'c##usuario1',
         'PASSWORD': 'usuario123',
         'TEST': {
